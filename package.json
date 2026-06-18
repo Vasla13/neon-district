@@ -1,0 +1,33 @@
+{
+  "name": "neon-district",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:client": "vite --host 127.0.0.1",
+    "dev:server": "tsx watch server/index.ts",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "start": "node dist-server/index.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.1.1",
+    "concurrently": "^10.0.3",
+    "express": "^5.2.1",
+    "phaser": "^3.90.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.2",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.16"
+  }
+}
